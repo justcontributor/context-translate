@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>우클릭 번역 설정</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="options.css">
+</head>
+
+<body>
+  <h1>우클릭 번역 설정</h1>
+  <p>우클릭 번역 사용을 환영합니다! 여기서 세부 설정을 마쳐보세요.</p>
+  <a style="text-decoration: none;" href="https://store.whale.naver.com/detail/kkndlopgindmfibieipmabjjodhhbknb">웨일
+    스토어에서 평가/피드백 남기기 ></a>
+  <h2>번역 서비스 설정</h2>
+  <p>사용할 번역 서비스를 설정하세요!</p>
+  <select id="service">
+    <option value="papago">파파고</option>
+    <option value="google">구글</option>
+    <option value="kakaoi">카카오 i</option>
+    <option value="bing">빙</option>
+    <option value="set">번역기들</option>
+    <option value="yandex">얀덱스</option>
+    <option value="flitto">플리토</option>
+    <option value="samsung">삼성(베타)</option>
+    <option value="deepl">DeepL</option>
+  </select>
+  <div class="toggle">
+    <h2>단축키 설정</h2>
+    <span>
+      <label class="switch inbox">
+        <input type="checkbox" id="short" class="align">
+        <span class="slider align"></span>
+      </label>
+    </span>
+  </div>
+  <p><span style="color:red">아래 입력창을 클릭한 뒤</span> 단축키로 사용할 키를 입력하세요!<br /><strong>단축키 설정은 사이트를 새로고침한 뒤에 적용됩니다.</strong>
+  </p>
+  <input id="shortcut" type="text" placeholder="기본값: F8" readonly></input>
+  <span class="tog">
+    Ctrl
+    <label class="switch">
+      <input type="checkbox" id="ctrl" class="align">
+      <span class="slider align"></span>
+    </label>
+  </span>
+  <span class="tog">
+    Shift
+    <label class="switch">
+      <input type="checkbox" id="shift" class="align">
+      <spanㅈ class="slider align"></span>
+    </label>
+  </span>
+  <span class="tog">
+    Alt
+    <label class="switch">
+      <input type="checkbox" id="alt" class="align">
+      <span class="slider align"></span>
+    </label>
+  </span>
+  <div class="toggle">
+    <h2>번역 시 원문 복사(베타)</h2>
+    <span>
+      <label class="switch inbox">
+        <input type="checkbox" id="copy" class="align">
+        <span class="slider align"></span>
+      </label>
+    </span>
+  </div>
+
+  <p id="warn"></p>
+  <div id="status"></div>
+  <h2>기타 팁 및 안내</h2>
+  <ul>
+    <li>번역 창을 열거나 닫으려면 Ctrl+[ 단축키를 이용해보세요! (웨일에서 제공하는 사이드바 단축키)<br />(번역 창을 사이드바에서 최근에 열었어야 사용 가능)</li>
+    <li>메인 창을 이용할 때 사이드바가 닫혀 불편하시다면 사이드바 패널 아래쪽의 고정 버튼을 눌러 사이드바를 고정하여 보세요.</li>
+    <li>반대로 메인 창을 이용할 때 사이드바가 저절로 닫히게 하고 싶으시면 고정되어 있는 사이드바를 위와 같은 방법으로 해제하시면 됩니다!</li>
+    <li>텍스트를 선택하지 않은 경우에도 위에서 설정한 단축키를 누르면 번역기 사이트가 열리므로 바로 번역 서비스를 이용할 수 있습니다.</li>
+  </ul>
+  <h2>개발자 공지</h2>
+  <ol>
+    <li>일부 사이트에서는 단축키 사용을 막아 두어 단축키를 사용할 수 없습니다. 웨일 혹은 사이트 내 단축키와 확장앱 단축키가 겹치면 오류가 발생할 가능성이 있으므로 어느 하나를 다른 단축키로 변경하여 주시기
+      바랍니다.</li>
+  </ol>
+
+  <h2>개인정보 관련 안내</h2>
+  <p>본 확장 프로그램에서는 사용자의 개인정보를 일체 수집하지 않습니다. 하지만 사용하시는 번역 사이트에 따라 번역 사이트 자체적으로 데이터를 수집할 수 있습니다. 본 확장 프로그램과는 무관하며 사이트에 따라
+    다른 부분이므로, 해당 번역 사이트의 개인정보취급방침을 우선 확인한 후 이용하시기 바랍니다.</p>
+  <script src="options.js"></script>
+</body>
+
+</html>
