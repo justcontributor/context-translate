@@ -13,12 +13,6 @@
       "matches": ["<all_urls>"]
     }
   ],
-  "web_accessible_resources": [
-    {
-      "resources": ["module.js"],
-      "matches": ["<all_urls>"]
-    }
-  ],
   "description": "우클릭으로 사이드바에서 번역 서비스를 이용하여 보세요.",
   "icons": {
     "128": "./icon/icon128.png",
