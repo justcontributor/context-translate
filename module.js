@@ -11,11 +11,10 @@ const copy = (text) => {
   const el = document.createElement("textarea");
   el.value = text;
   el.setAttribute("readonly", "");
-  el.style.position = "absolute";
-  el.style.left = "-9999px";
+  el.style.cssText = "position: absolute; left: -9999px";
   document.body.appendChild(el);
   el.select();
-  document.execCommand("copy");
+  document.execCommand("copy"); // new API requests permission too frequently
   document.body.removeChild(el);
 };
 

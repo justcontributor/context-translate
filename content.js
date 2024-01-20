@@ -1,3 +1,10 @@
+const runModule = async (arg) => {
+  const src = chrome.runtime.getURL("module.js");
+  const script = await import(src);
+  script.translate();
+};
+
+// load extension shortcut settings
 whale.storage.sync.get(
   {
     Key: "F8",
@@ -15,16 +22,12 @@ whale.storage.sync.get(
   }
 );
 
+// when contextMenu clicked
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) =>
-  sendResponse(
-    (async () => {
-      const src = chrome.runtime.getURL("module.js");
-      const script = await import(src);
-      script.translate(request.arg);
-    })()
-  )
+  sendResponse(runModule(request.arg))
 );
 
+// when shortcut pressed
 window.onkeyup = (e) => {
   if (
     short &&
@@ -34,10 +37,6 @@ window.onkeyup = (e) => {
     e.altKey == alt
   ) {
     e.preventDefault();
-    (async () => {
-      const src = chrome.runtime.getURL("module.js");
-      const script = await import(src);
-      script.translate();
-    })();
+    runModule();
   }
 };
