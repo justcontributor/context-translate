@@ -19,7 +19,7 @@
       "matches": ["<all_urls>"]
     }
   ],
-  "description": "우클릭으로 사이드바에서 번역 서비스를 이용하여 보세요.",
+  "description": "우클릭/단축키로 사이드바에서 번역 서비스를 이용하여 보세요.",
   "icons": {
     "128": "./icon/icon128.png",
     "16": "./icon/icon16.png",
@@ -33,5 +33,5 @@
   },
   "permissions": ["contextMenus", "storage", "tabs", "clipboardWrite"],
   "host_permissions": ["<all_urls>"],
-  "version": "1.6.0"
+  "version": "1.6.1"
 }

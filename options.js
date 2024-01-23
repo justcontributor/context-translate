@@ -36,7 +36,8 @@ let restore_options = () => {
       Shift: 0, //기본값 파파고, F8, 복사 안 함, 단축키 사용
     },
     (items) => {
-      document.getElementById("service").value = items.Service;
+      document.getElementById("service").value =
+        items.Service == "set" ? "papago" : items.Service; // 번역기들 fallback
       document.getElementById("shortcut").value = items.Key;
       document.getElementById("copy").checked = items.Copy;
       document.getElementById("short").checked = items.Short;

@@ -29,7 +29,7 @@ const translate = (arg) => {
     papago: "https://papago.naver.com/?sk=auto&tk=ko&st=",
     kakaoi: "https://translate.kakao.com/?q=",
     bing: "https://www.bing.com/translator?from=auto&to=ko&text=",
-    set: "https://translators.to/?source=&target=ko&text=",
+    set: "https://papago.naver.com/?sk=auto&tk=ko&st=", // 번역기들 fallback
     yandex: "https://translate.yandex.com/?lang=en-ko&text=",
     flitto:
       "https://ko.flitto.com/language/translation/text?src_lang_id=17&dst_lang_id=33&lang_id=33&q=",
@@ -38,6 +38,7 @@ const translate = (arg) => {
   };
 
   const andEscape = {
+    // & 문자에 특수 처리해야 하는 사이트
     papago: "%25amp",
   };
 
