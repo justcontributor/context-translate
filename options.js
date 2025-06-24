@@ -112,10 +112,10 @@ let toggle_options = (e) => {
 };
 
 document.addEventListener("DOMContentLoaded", restore_options);
+document.getElementById("service").addEventListener("change", save_options);
 document
   .getElementById("shortcut")
   .addEventListener("keydown", change_shortcut);
-document.getElementById("service").addEventListener("change", save_options);
 document.getElementById("copy").addEventListener("change", save_options);
 document.getElementById("short").addEventListener("change", save_options);
 document.getElementById("alt").addEventListener("change", toggle_options);
